@@ -2,12 +2,15 @@
   --serif-font: "Domine", serif;
   --sans-font: "Lato", sans-serif;
 
-  --purple: #503062;
+  --blue: #28a99e;
+  --yellow: #e0ff4f;
+  --thistle: #C1b8c8;
   --white: #ededed;
-  --grey: #333333;
-  --grey-90-translucent: rgba(51, 51, 51, 0.9);
-  --grey-75-translucent: rgba(51, 51, 51, 0.75);
-  --grey-50-translucent: rgba(51, 51, 51, 0.5);
+  --grey: #4a4a4a;
+  --grey: rgb(74, 74, 74);
+  --grey-90-translucent: rgba(74, 74, 74, 0.9);
+  --grey-75-translucent: rgba(74, 74, 74, 0.75);
+  --grey-50-translucent: rgba(74, 74, 74, 0.5);
 
   --big-font: 45px;
   --medium-big-font: 40px;
@@ -21,7 +24,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
   font-family: var(--serif-font);
-  color: var(--white);
+  color: var(--thistle);
 }
 
 /* 2. Remove default margin */
@@ -75,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 body {
-  background-color: var(--purple);
+  background-color: var(--grey);
 }
 
 a {
@@ -98,6 +101,7 @@ h1 {
 
 p {
   font-size: var(--p-font);
+  text-align: center;
 }
 
 
@@ -129,8 +133,8 @@ p {
 }
 
 .main-header {
-  /* background-color: var(--grey-90-translucent); */
-  background-image: url("images/profile\ pic.jpg");
+  background-color: var(--grey-90-translucent);
+  /* background-image: url("images/profile\ pic.jpg"); */
   background-position: center;
   background-size: cover;
 
@@ -141,7 +145,7 @@ p {
 }
 
 .header-text-container {
-  background-color: var(--grey-90-translucent);
+  /* background-color: var(--blue); */
   padding: 5px 0 35px;
   width: 100%;
 }
@@ -164,7 +168,7 @@ p {
 }
 
 .links li a {
-  background-color: var(--purple);
+  background-color: var(--blue);
   border-radius: 15px;
   display: block;
   font-size: var(--medium-small-font);
@@ -178,8 +182,8 @@ p {
 
 .links li a:hover {
   background-color: var(--white);
-  box-shadow: 1px 1px 2px 5px var(--purple);
-  color: var(--purple);
+  box-shadow: 1px 1px 2px 5px var(--blue);
+  color: var(--blue);
 }
 
 .links li a img {
@@ -193,9 +197,9 @@ p {
   width: 100%;
 }
 
-.about-container h1 {
+.about-container h2 {
   text-decoration: underline;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 }
 
 .about-container p {
@@ -218,7 +222,7 @@ p {
 .email-link:hover {
   background-color: var(--white);
   box-shadow: 1px 1px 2px 5px var(--grey);
-  color: var(--purple);
+  color: var(--blue);
 }
 
 
