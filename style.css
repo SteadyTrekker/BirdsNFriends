@@ -231,7 +231,7 @@ p {
 
 @media screen and (min-width: 600px) {
   .main-header {
-    background-image: url("images/profile\ pic\ borders\ grey\ 4x3.jpg");
+    /* background-image: url("images/profile\ pic\ borders\ grey\ 4x3.jpg"); */
     min-height: 600px;
   }
 
