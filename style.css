@@ -2,15 +2,18 @@
   --serif-font: "Domine", serif;
   --sans-font: "Lato", sans-serif;
 
-  --blue: #28a99e;
-  --yellow: #e0ff4f;
-  --thistle: #C1b8c8;
-  --white: #ededed;
-  --grey: #4a4a4a;
-  --grey: rgb(74, 74, 74);
-  --grey-90-translucent: rgba(74, 74, 74, 0.9);
-  --grey-75-translucent: rgba(74, 74, 74, 0.75);
-  --grey-50-translucent: rgba(74, 74, 74, 0.5);
+  --black: #111111;
+  --burnt-ochre: #D97736;
+  --acid-lime: #D4E157;
+  /* --green: #607744; */
+  /* --green: #5b7553; */
+  --green: #33673b;
+  --white: #e3e5e5;
+  --grey: #161a1d;
+  /* --grey: rgb(22, 26, 29); */
+  --grey-90-translucent: rgba(22, 26, 29, 0.9);
+  --grey-75-translucent: rgba(22, 26, 29, 0.75);
+  --grey-50-translucent: rgba(22, 26, 29, 0.5);
 
   --big-font: 45px;
   --medium-big-font: 40px;
@@ -24,7 +27,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
   font-family: var(--serif-font);
-  color: var(--thistle);
+  color: var(--white);
 }
 
 /* 2. Remove default margin */
@@ -125,54 +128,82 @@ p {
 
 
 .main {
-  background-color: var(--grey-50-translucent);
+  /* background-color: var(--grey-50-translucent); */
   justify-content: flex-start;
 
   height: 100%;
   width: 100%;
 }
 
+.main-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .main-header {
-  background-color: var(--grey-90-translucent);
+  aspect-ratio: 4 / 3;
+  /* background-color: var(--grey-90-translucent); */
   /* background-image: url("images/profile\ pic.jpg"); */
   background-position: center;
   background-size: cover;
 
   min-height: 650px;
+  position: relative;
 
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
 }
 
 .header-text-container {
-  /* background-color: var(--blue); */
-  padding: 5px 0 35px;
+  background-color: var(--grey-75-translucent);
+  padding: 15px 0 35px;
   width: 100%;
 }
 
 .main-header h1 {
+  color: var(--white);
   padding-bottom: 25px;
+}
+
+.main-header h2 {
+  color: var(--white);
 }
 
 
 
 .links-container {
   background-color: var(--grey);
-  margin-top: 100px;
+  margin: 100px 0;
   padding: 25px 0;
   width: 100%;
 }
+
+.links {
+    /* column-gap: 25px; */
+    row-gap: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    max-width: 650px;
+    width: 100%;
+  }
 
 .links-header {
   margin-bottom: 25px;
 }
 
 .links li a {
-  background-color: var(--blue);
+  background-color: var(--green);
   border-radius: 15px;
   display: block;
   font-size: var(--medium-small-font);
-  margin: 0 0 25px 0;
   padding: 10px 20px;
   transition: 600ms;
 
@@ -182,13 +213,30 @@ p {
 
 .links li a:hover {
   background-color: var(--white);
-  box-shadow: 1px 1px 2px 5px var(--blue);
-  color: var(--blue);
+  box-shadow: 1px 1px 2px 5px var(--green);
+  color: var(--green);
 }
 
 .links li a img {
   height: 50px;
 }
+
+
+
+.videos {
+  width: 100%;
+  padding: 0 25px;
+}
+
+.videos iframe {
+  aspect-ratio: 3 / 4;
+  /* height: 450px; */
+  max-width: 450px;
+  width: 100%;
+}
+
+
+
 
 
 .about-container {
@@ -207,10 +255,12 @@ p {
 }
 
 .email-link {
-  background-color: var(--grey);
+  background-color: var(--green);
   margin-top: 10px;
   padding: 15px 5px;
   text-align: center;
+
+  max-width: 350px;
   width: 100%;
 
   transition: 600ms;
@@ -221,8 +271,8 @@ p {
 
 .email-link:hover {
   background-color: var(--white);
-  box-shadow: 1px 1px 2px 5px var(--grey);
-  color: var(--blue);
+  box-shadow: 1px 1px 2px 2px var(--green);
+  color: var(--green);
 }
 
 
@@ -254,7 +304,7 @@ p {
 
 @media screen and (min-width: 1024px) {
   .main-header {
-    
+    max-width: 1200px;
   }
 
   .header-text-container {
