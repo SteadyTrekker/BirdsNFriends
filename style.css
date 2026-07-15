@@ -185,12 +185,10 @@ p {
 
 .links {
     /* column-gap: 25px; */
-    row-gap: 50px;
+    /* row-gap: 50px; */
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    justify-items: center;
+    display: flex;
+    justify-content: space-evenly;
     max-width: 650px;
     width: 100%;
   }
@@ -200,7 +198,7 @@ p {
 }
 
 .links li a {
-  background-color: var(--green);
+  background-color: var(--white);
   border-radius: 15px;
   display: block;
   font-size: var(--medium-small-font);
@@ -286,12 +284,6 @@ p {
   }
 
   .links {
-    column-gap: 25px;
-    row-gap: 25px;
-
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     max-width: 650px;
     width: 100%;
   }
